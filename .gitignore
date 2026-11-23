@@ -1,0 +1,45 @@
+# Зависимости и результаты сборки
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Локальные настройки и секреты; шаблон публикуется без ключей
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+.aws/
+.ssh/
+
+# Диагностика, журналы, кэши и результаты проверок
+diagnostics/
+.npm-cache/
+.cache/
+.vite/
+*.log
+playwright-report/
+test-results/
+
+# Временные файлы и резервные копии
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+
+# Служебные файлы ОС и локальные настройки IDE
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/

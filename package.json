@@ -1,0 +1,35 @@
+{
+  "name": "weather-mcp-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --use-system-ca --import tsx --watch server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "node --use-system-ca --import tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "probe:mcp": "node --use-system-ca scripts/probe.mjs",
+    "verify:live": "node --use-system-ca --import tsx scripts/verify-live.ts"
+  },
+  "engines": { "node": ">=24.0.0" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "ajv": "8.20.0",
+    "dotenv": "17.2.3",
+    "express": "5.1.0",
+    "openai": "6.9.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.5",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.5",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "concurrently": "9.2.5",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "7.3.8"
+  }
+}
